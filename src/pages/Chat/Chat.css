@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+.chat {
+  @apply min-h-screen grid place-items-center;
+  background: linear-gradient(#596aff, #383699);
+}
+
+.chat-container {
+  width: 95%;
+  height: 75vh;
+  max-width: 1000px;
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  border-radius: 12px;
+}

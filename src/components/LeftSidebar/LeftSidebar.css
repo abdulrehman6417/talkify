@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+.leftSide {
+  @apply bg-[#001030] text-white h-[75vh] rounded-l-xl;
+}
+
+.left-top {
+  @apply px-5 pt-5;
+}
+
+.left-nav {
+  @apply flex items-center justify-between;
+}
+
+.left-nav img {
+  @apply w-[7.5rem];
+}
+
+.left-nav .menu img {
+  @apply w-5;
+}
+
+.left-search {
+  @apply flex items-center gap-2 my-5 bg-[#002670] p-2 rounded-[5px];
+}
+
+.left-search img {
+  @apply w-4;
+}
+
+.left-search input {
+  @apply text-sm outline-none;
+}
+
+.left-list {
+  @apply flex flex-col h-[70%] overflow-y-scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.users {
+  @apply flex items-center gap-2 px-5 py-2 hover:bg-[#077fff33]  cursor-pointer;
+}
+
+.users img {
+  @apply size-10 rounded-full;
+}

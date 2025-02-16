@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+.chat-box {
+  @apply h-[75vh] relative bg-[#f1f5ff];
+}
+
+.chat-user {
+  @apply flex items-center border-b-1 border-b-gray-400 gap-3 p-2;
+}
+
+.chat-user p {
+  @apply text-lg font-medium text-gray-800;
+}
+
+.chat-input {
+  @apply w-full flex items-center bg-white absolute bottom-0 left-0 right-0 px-4 py-3 rounded-t-lg;
+}
+
+.chat-input label {
+  @apply flex items-center mr-2;
+}
+
+.chat-input input {
+  @apply w-full outline-none text-[17px] px-2;
+}
+
+.chat-input input::placeholder {
+  @apply text-gray-500 text-[15px];
+}
+
+.message-area {
+  @apply flex flex-col-reverse overflow-y-scroll  pb-12;
+
+  height: calc(100% - 70px);
+}
+
+.sender-msg div img,
+.rec-msg div img {
+  @apply w-7 rounded-full;
+}
+
+.sender-msg,
+.rec-msg {
+  @apply flex items-end justify-end gap-3 px-4 py-2;
+}
+
+.rec-msg {
+  @apply flex flex-row-reverse justify-end;
+}
+
+.message {
+  @apply max-w-[200px] bg-blue-600 text-white text-[12px] font-light p-2;
+  border-radius: 10px 10px 0 10px;
+}
+
+.rec-msg .message {
+  border-radius: 10px 10px 10px 0;
+}
+
+.sender-msg div,
+.rec-msg div {
+  @apply flex flex-col justify-center items-center text-center text-[10px] gap-1 font-medium;
+}
+
+.msg-image {
+  @apply rounded-lg max-w-[200px] mb-1;
+}

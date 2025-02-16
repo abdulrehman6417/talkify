@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+.rightSide {
+  @apply bg-[#001030] text-white h-[75vh] rounded-r-xl relative overflow-y-scroll;
+}
+
+.right-top {
+  @apply flex flex-col items-center gap-1 border-b-2 border-b-gray-400 py-5;
+}
+
+.right-top img {
+  @apply w-1/2 rounded-full;
+}
+
+.media {
+  @apply px-3 py-2;
+}
+
+.media div {
+  @apply max-h-[200px] overflow-y-scroll mt-3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.media div img {
+  @apply rounded-[5px];
+}
+
+.logout {
+  @apply w-2/4 mb-3 py-1 text-[16px] font-medium rounded-full bg-red-600 hover:bg-red-600/90 cursor-pointer 
+  absolute bottom-0;
+}

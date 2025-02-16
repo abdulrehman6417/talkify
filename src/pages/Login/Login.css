@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+.login {
+  @apply min-h-screen bg-[url(/bg.jpg)] bg-cover bg-no-repeat flex items-center justify-evenly;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(30, 146, 214, 0.8),
+      rgba(0, 0, 255, 0.6)
+    ),
+    url("/bg.jpg");
+}
+
+.login .logo {
+  @apply flex flex-col items-center;
+
+  width: max(20vw, 200px);
+}
+
+.login .login-form {
+  @apply bg-amber-100 flex flex-col gap-5 py-5 px-6 rounded-xl;
+}
+
+.login .login-form .form-input {
+  @apply border-1 border-gray-500 rounded-[5px] focus:outline-2 outline-blue-700 py-2 px-2;
+}
+
+.login .login-form .submit-btn {
+  @apply bg-blue-500 hover:bg-blue-600/90 cursor-pointer text-white text-lg font-medium py-2 rounded-[5px];
+}
+
+span {
+  @apply pl-1;
+}
