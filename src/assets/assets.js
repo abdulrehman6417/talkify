@@ -5,6 +5,8 @@ import search_icon from "./search_icon.png";
 import profile from "./profile.png";
 import green_dot from "./green_dot.png";
 import help_icon from "./help_icon.png";
+import avatar_icon from "./avatar_icon.png";
+import userImage from "./user.jpg";
 
 const assets = {
   talkify_logo,
@@ -14,6 +16,8 @@ const assets = {
   profile,
   green_dot,
   help_icon,
+  avatar_icon,
+  userImage,
 };
 
 export default assets;

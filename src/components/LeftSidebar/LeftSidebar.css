@@ -44,6 +44,26 @@
   @apply flex items-center gap-2 px-5 py-2 hover:bg-[#077fff33]  cursor-pointer;
 }
 
+.users:hover span {
+  @apply text-white;
+}
+
 .users img {
   @apply size-10 rounded-full;
+}
+
+.sub-menu {
+  @apply hidden absolute top-[100%] right-1 px-4 py-3 bg-white text-slate-900 rounded-xl min-w-[130px];
+}
+
+.sub-menu hr {
+  @apply my-2 border-1 border-gray-400 rounded-full;
+}
+
+.menu {
+  @apply relative cursor-pointer;
+}
+
+.menu:hover .sub-menu {
+  @apply block;
 }
