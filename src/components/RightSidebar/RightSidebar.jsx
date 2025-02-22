@@ -1,8 +1,25 @@
 import React from "react";
 import "./RightSidebar.css";
 import assets from "../../assets/assets";
+import { signOut } from "firebase/auth";
+import { auth } from "../../config/firebaseConfig";
+import { toast } from "react-toastify";
 
 const RightSidebar = () => {
+  // FIREBASE LOGOUT FUNCTION
+
+  const logout = async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.log(error.code);
+      toast.error(error.code.split("/")[1].toUpperCase().split("-").join(" "), {
+        theme: "dark",
+        autoClose: 1500,
+      });
+    }
+  };
+
   return (
     <div className="rightSide">
       <div className="right-top">
@@ -27,7 +44,9 @@ const RightSidebar = () => {
       </div>
 
       <div className="flex justify-center">
-        <button className="logout">Logout</button>
+        <button onClick={logout} className="logout">
+          Logout
+        </button>
       </div>
     </div>
   );

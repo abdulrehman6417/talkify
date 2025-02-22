@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_apiKey,
-  authDomain: import.meta.env.VITE_authDomain,
-  projectId: import.meta.env.VITE_projectId,
-  storageBucket: import.meta.env.VITE_storageBucket,
-  messagingSenderId: import.meta.env.messagingSenderId,
-  appId: import.meta.env.VITE_appId,
+  apiKey: "AIzaSyDUBhV3FDovEtxdxMChG_e522ke39880r0",
+  authDomain: "talkify-5377e.firebaseapp.com",
+  projectId: "talkify-5377e",
+  storageBucket: "talkify-5377e.firebasestorage.app",
+  messagingSenderId: "35935102248",
+  appId: "1:35935102248:web:e1543555cac37022065c1d",
 };
 
 // Initialize Firebase
