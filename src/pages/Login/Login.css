@@ -31,3 +31,9 @@
 span {
   @apply pl-1;
 }
+
+@media (max-width: 768px) {
+  .login {
+    @apply flex flex-col gap-3;
+  }
+}

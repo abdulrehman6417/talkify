@@ -8,6 +8,10 @@ export const ChatContext = createContext();
 const ChatContextProvider = ({ children }) => {
   const [userData, setUserData] = useState(null);
   const [chatData, setChatData] = useState(null);
+  const [messagesId, setMessagesId] = useState(null);
+  const [messages, setMessages] = useState([]);
+  const [chatUser, setChatUser] = useState(null);
+  const [chatVisible, setChatVisible] = useState(false);
 
   const navigate = useNavigate();
 
@@ -66,6 +70,14 @@ const ChatContextProvider = ({ children }) => {
     chatData,
     setChatData,
     loadUserData,
+    messages,
+    setMessages,
+    messagesId,
+    setMessagesId,
+    chatUser,
+    setChatUser,
+    chatVisible,
+    setChatVisible,
   };
 
   return <ChatContext.Provider value={value}>{children}</ChatContext.Provider>;

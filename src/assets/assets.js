@@ -7,6 +7,7 @@ import green_dot from "./green_dot.png";
 import help_icon from "./help_icon.png";
 import avatar_icon from "./avatar_icon.png";
 import userImage from "./user.jpg";
+import arrow_icon from "./arrow_icon.png";
 
 const assets = {
   talkify_logo,
@@ -18,6 +19,7 @@ const assets = {
   help_icon,
   avatar_icon,
   userImage,
+  arrow_icon,
 };
 
 export default assets;

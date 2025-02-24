@@ -3,10 +3,19 @@ import "./Login.css";
 import assets from "../../assets/assets";
 import {
   createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { auth, db } from "../../config/firebaseConfig";
-import { doc, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  setDoc,
+  where,
+} from "firebase/firestore";
 import { toast } from "react-toastify";
 import PulseLoader from "react-spinners/PulseLoader";
 
@@ -88,6 +97,42 @@ const Login = () => {
     }
   };
 
+  //  FIREBASE RESET PASSWORD FUNCTION
+
+  const resetPassword = async (email) => {
+    if (!email) {
+      toast.error("Please enter your email", {
+        theme: "dark",
+        autoClose: 1500,
+      });
+      return;
+    }
+
+    try {
+      const userRef = collection(db, "users");
+      const q = query(userRef, where("email", "==", email));
+      const querySnap = await getDocs(q);
+      if (!querySnap.empty) {
+        await sendPasswordResetEmail(auth, email);
+        toast.success("Password reset link has been sent to your email", {
+          theme: "dark",
+          autoClose: 1500,
+        });
+      } else {
+        toast.error("Email doesn't exist", {
+          theme: "dark",
+          autoClose: 1500,
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error(error.message, {
+        theme: "dark",
+        autoClose: 1500,
+      });
+    }
+  };
+
   return (
     <div className="login">
       {/* TALKIFY LOGO HERE */}
@@ -164,7 +209,10 @@ const Login = () => {
               </p>
               <p className="login-toggle text-gray-800 text-[14px]">
                 Forgot Password?
-                <span className="cursor-pointer text-blue-700/90 font-medium">
+                <span
+                  onClick={() => resetPassword(email)}
+                  className="cursor-pointer text-blue-700/90 font-medium"
+                >
                   Click here
                 </span>
               </p>

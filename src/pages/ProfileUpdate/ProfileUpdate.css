@@ -48,3 +48,16 @@
 .profile-image img {
   @apply rounded-full mr-10;
 }
+
+@media (max-width: 768px) {
+  .profile-update {
+    @apply w-[90%];
+  }
+  .profile-image {
+    @apply hidden;
+  }
+
+  .profile-details {
+    @apply w-full;
+  }
+}

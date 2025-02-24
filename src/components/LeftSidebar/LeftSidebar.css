@@ -52,6 +52,14 @@
   @apply size-10 rounded-full;
 }
 
+.users.not-seen img {
+  border: 3px solid rgb(95, 233, 95);
+}
+
+.users.not-seen div span {
+  color: rgb(95, 233, 95);
+}
+
 .sub-menu {
   @apply hidden absolute top-[100%] right-1 px-4 py-3 bg-white text-slate-900 rounded-xl min-w-[130px];
 }
@@ -66,4 +74,15 @@
 
 .menu:hover .sub-menu {
   @apply block;
+}
+
+@media (max-width: 900px) {
+  .leftSide {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .hide {
+    @apply hidden;
+  }
 }

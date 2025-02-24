@@ -24,10 +24,16 @@
 }
 
 .media div img {
-  @apply rounded-[5px];
+  @apply h-16 w-40 rounded-[5px] cursor-pointer;
 }
 
 .logout {
   @apply w-2/4 mb-3 py-1 text-[16px] font-medium rounded-full bg-red-600 hover:bg-red-600/90 cursor-pointer 
   absolute bottom-0;
+}
+
+@media (max-width: 900px) {
+  .rightSide {
+    @apply hidden;
+  }
 }

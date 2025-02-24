@@ -14,3 +14,9 @@
   grid-template-columns: 1fr 2fr 1fr;
   border-radius: 12px;
 }
+
+@media (max-width: 900px) {
+  .chat-container {
+    @apply flex;
+  }
+}
